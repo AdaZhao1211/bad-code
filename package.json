@@ -1,7 +1,7 @@
 {
   "name": "bad-code",
   "main": "./lib/key-count",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shows number of backspace key pressed in the status bar",
   "keywords": [
     "key",
