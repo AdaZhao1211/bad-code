@@ -29,10 +29,10 @@ module.exports = KeyCount =
         @subscriptions = new CompositeDisposable
         @subscriptions.add atom.commands.add 'atom-workspace', 'key-count:reset': => @reset()
 
-        format = atom.config.get('statusbar-key-count.format', 'value')
-        backgroundColor = atom.config.get('statusbar-key-count.background-color', 'value')
-        textColor = atom.config.get('statusbar-key-count.text-color', 'value')
-        defaultKeyString = atom.config.get('statusbar-key-count.default-key-string')
+        format = atom.config.get('bad-code.format', 'value')
+        backgroundColor = atom.config.get('bad-code.background-color', 'value')
+        textColor = atom.config.get('bad-code.text-color', 'value')
+        defaultKeyString = atom.config.get('bad-code.default-key-string')
 
         @keyCountView = new KeyCountView()
         @keyCountView.init()
@@ -46,13 +46,13 @@ module.exports = KeyCount =
         colorRegex = /^#[a-fA-F0-9]{6}$/
 
         _this = this
-        atom.config.onDidChange 'statusbar-key-count.format', ({newValue, oldValue}) ->
+        atom.config.onDidChange 'bad-code.format', ({newValue, oldValue}) ->
             _this.keyCountView.format = newValue || DEFAULT_FORMAT
             _this.keyCountView.refresh()
-        atom.config.onDidChange 'statusbar-key-count.background-color', ({newValue, oldValue}) ->
+        atom.config.onDidChange 'bad-code.background-color', ({newValue, oldValue}) ->
             _this.keyCountView.backgroundColor = newValue?.match colorRegex || DEFAULT_BACKGROUND_COLOR
             _this.keyCountView.refresh()
-        atom.config.onDidChange 'statusbar-key-count.text-color', ({newValue, oldValue}) ->
+        atom.config.onDidChange 'bad-code.text-color', ({newValue, oldValue}) ->
             _this.keyCountView.textColor = newValue?.match colorRegex || DEFAULT_TEXT_COLOR
             _this.keyCountView.refresh()
 

@@ -1,4 +1,4 @@
-# statusbar-key-count package
+# bad-code package
 
 Count the number of key presses in your day.
 Adds a small customizable indicator to the bottom status bar.
