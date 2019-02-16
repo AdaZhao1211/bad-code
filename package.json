@@ -10,7 +10,7 @@
     "key-count",
     "statusbar"
   ],
-  "repository": "https://github.com/JChanceHud/statusbar-key-count",
+  "repository": "https://github.com/AdaZhao1211/bad-code",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
