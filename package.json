@@ -1,0 +1,25 @@
+{
+  "name": "bad-code",
+  "main": "./lib/key-count",
+  "version": "0.1.4",
+  "description": "Shows number of backspace key pressed in the status bar",
+  "keywords": [
+    "key",
+    "count",
+    "keycount",
+    "key-count",
+    "statusbar"
+  ],
+  "repository": "https://github.com/JChanceHud/statusbar-key-count",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  }
+}
